@@ -7,22 +7,22 @@ function Asteroid(pos, r) {
   if (r) {
     this.r = r * 0.5;
   } else {
-    this.r = random(15, 50);
+    this.r = random(20,50); //size of asteroid 
   }
-  
-  
+
+
   this.vel = p5.Vector.random2D();
-  this.total = floor(random(5, 15));
+  this.total = (random(10, 20));
   this.offset = [];
   for (var i = 0; i < this.total; i++) {
     this.offset[i] = random(-this.r * 0.5, this.r * 0.5);
   }
-  
+
   this.update = function() {
     this.pos.add(this.vel);
   }
-  
-  this.render = function() {
+
+  this.render = function() { //asteroid shape
     push();
     stroke(255);
     noFill();
@@ -37,19 +37,19 @@ function Asteroid(pos, r) {
       vertex(x, y);
     }
     endShape(CLOSE);
-    
-    
+
+
     pop();
   }
-  
-  this.breakup = function() {
+
+  this.breakup = function() { //creates two new smaller asteroids when the asteroid makes contact with laser
     var newA = [];
     newA[0] = new Asteroid(this.pos, this.r);
     newA[1] = new Asteroid(this.pos, this.r);
     return newA;
   }
-  
-  this.edges = function() {
+
+  this.edges = function() { //creates the edges for the asteroids and dictates asteroid location when asteroid passes edge of screen
     if (this.pos.x > width + this.r) {
       this.pos.x = -this.r;
     } else if (this.pos.x < -this.r) {
@@ -61,5 +61,5 @@ function Asteroid(pos, r) {
       this.pos.y = height + this.r;
     }
   }
-  
+
 }

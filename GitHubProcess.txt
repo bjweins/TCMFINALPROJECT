@@ -1,0 +1,18 @@
+We found GitHub to be extremely helpful in our project work.
+Brett had worked previously in GitHub for SQL in past internships, so that
+background made the transition easier. As our project was inspired by other work
+we found online, we were able to put that source code into GitHub to use as a
+reference should we reach a roadblock in our Make process. This reference allowed
+us to challenge ourselves while ensuring that we weren’t banging our heads
+against the wall to fix a small issue in the code. Our goal in doing this was to
+ensure that we continuously challenge ourselves while remaining focused on the
+finished project.  One example of this was the splitting of the asteroids when
+contact was made between the asteroid and the laser. This reference code is not
+in our final project folder as to not cause confusion between files.
+
+Moving forward, one thing we would like to improve is the capability to have our
+ship “bounce” off asteroids when contact is made, instead of passing through the
+asteroid. Further, another aspect we would like to improve on is the scoring
+system in the game. Ideally, we would want the player to have 5 lives, losing
+one each time the ship hit any asteroids. This would create more risk and
+frustration for the player, ideally incentivizing them to play again. 
